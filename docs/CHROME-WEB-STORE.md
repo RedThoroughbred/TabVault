@@ -62,7 +62,7 @@ Chrome Web Store requires the following graphic assets in the **Store Listing** 
 1. **Store Icon:** `128x128` PNG (you can upload `src/icons/icon128.png`).
 2. **Screenshots (at least 1 required, up to 5):**
    - Dimensions must be **`1280x800`** or **`640x400`** PNG/JPEG (no alpha transparency).
-   - Tip: Open Tab Vault with a couple of sample tab groups and a saved workspace, take a screenshot of the browser window with the popup open, and crop/resize to `1280x800`.
+   - Ready to upload: `docs/store/chrome-1-groups.png` and `docs/store/chrome-2-workspaces.png` (1280x800, the real popup with made-up sample tabs). They also fit the Firefox and Edge listings.
 3. **Small Promo Tile (optional):** `440x280` PNG/JPEG.
 
 ---
