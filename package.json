@@ -1,0 +1,23 @@
+{
+  "name": "tab-vault",
+  "version": "1.0.0",
+  "description": "Local-first Chrome and Firefox tab group & multi-window workspace manager",
+  "author": "Seth Egger",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/RedThoroughbred/TabVault.git"
+  },
+  "homepage": "https://github.com/RedThoroughbred/TabVault#readme",
+  "bugs": {
+    "url": "https://github.com/RedThoroughbred/TabVault/issues"
+  },
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "package": "node scripts/package.mjs",
+    "test": "node --test tests/*.test.cjs"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

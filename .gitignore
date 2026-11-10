@@ -1,0 +1,15 @@
+# Backups and sensitive browser data must never be committed
+*backup*.json
+*export*.json
+*.crx
+*.pem
+*.key
+*.zip
+releases/
+.env
+.env.*
+.DS_Store
+Thumbs.db
+node_modules/
+coverage/
+*.log

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Tab Vault</title><link rel="stylesheet" href="popup.css"></head>
+<body>
+<header><h1>Tab Vault <small>v1.0.0</small></h1><p>Save browser groups. Close the clutter.</p></header>
+<main>
+<section>
+ <div class="section-title"><h2>Open tab groups</h2><button id="refresh">Refresh</button></div>
+ <label class="search-label" for="scope">Show groups from</label><select id="scope"><option value="current">Current browser window</option><option value="all">All browser windows</option></select>
+ <div class="row toolbar"><button id="saveAll" class="primary">Save all groups</button><button id="stashAll">Stash all &amp; close</button></div>
+ <label class="toggle"><input id="dedup" type="checkbox" checked> Skip duplicate URLs when saving groups or workspaces</label>
+ <div id="openGroups" class="stack"></div>
+</section>
+<section>
+ <div class="section-title"><h2>Workspaces (all windows)</h2><span id="workspaceCount"></span></div>
+ <p class="help">Save the grouped tabs across multiple monitors as one workspace. Restore the entire workspace, a single saved window, or one tab group. New-window placement is best-effort.</p>
+ <div class="row toolbar"><button id="saveWorkspace" class="primary">Save entire workspace</button></div>
+ <div id="workspaces" class="stack"></div>
+</section>
+<section>
+ <div class="section-title"><h2>Closed saved groups</h2><span id="closedCount"></span></div>
+ <p class="help">Saved workspace groups not currently found as matching live Chrome tab groups. A partial group stays in its workspace list. Click Refresh to check again.</p>
+ <div id="closedGroups" class="stack"></div>
+</section>
+<section>
+ <div class="section-title"><h2>Saved groups</h2><span id="count"></span></div>
+ <label for="search" class="search-label">Find an open tab or search saved snapshots</label><input id="search" placeholder="Search…" autocomplete="off">
+ <div id="liveResults" class="stack"></div>
+ <div class="row toolbar"><button id="exportJson">Export JSON</button><button id="importJson">Import JSON</button><button id="exportMd">Export Markdown</button></div>
+ <input type="file" id="importFile" accept=".json,application/json" hidden>
+ <div id="savedGroups" class="stack"></div>
+</section>
+<section class="options"><h2>Duplicate review</h2><p>Inspect repeated URLs within groups and URLs appearing in multiple collections. Never removes anything.</p><button id="reviewDuplicates">Review duplicates</button><div id="duplicates" class="stack"></div></section>
+<section class="options"><h2>Automatic snapshots</h2><label class="toggle"><input id="auto" type="checkbox"> Snapshot open groups every 30 minutes</label><p>Opt-in, while Chrome is running. Keeps up to 3 automatic versions per group name/color. Never closes tabs.</p></section>
+<section class="about-section">
+ <details>
+  <summary>About Tab Vault &amp; credits</summary>
+  <div class="about-body">
+   <p><strong>Tab Vault</strong> — Group Stash &amp; Workspace Manager</p>
+   <dl>
+    <dt>Created by</dt><dd>Seth Egger</dd>
+    <dt>Originally created</dt><dd>November 9, 2026</dd>
+    <dt>Current version</dt><dd>1.0.0</dd>
+    <dt>License</dt><dd>MIT License (Open Source)</dd>
+    <dt>Privacy</dt><dd>Local storage; saved URLs are not encrypted</dd>
+   </dl>
+   <p class="about-note">Open-source local-first browser extension created by Seth Egger. Source code and documentation are available on GitHub under the MIT License.</p>
+  </div>
+ </details>
+</section>
+<p id="status" role="status" aria-live="polite"></p>
+<footer>Local-only · URLs are <strong>not encrypted</strong> · Export backups regularly. Saved tabs restore URLs, not unsaved forms or page state.</footer>
+</main><script src="core.js"></script><script src="workspace.js"></script><script src="popup.js"></script></body></html>

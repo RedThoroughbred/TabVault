@@ -1,0 +1,42 @@
+{
+  "manifest_version": 3,
+  "name": "Tab Vault - Group Stash",
+  "version": "1.0.0",
+  "author": "Seth Egger",
+  "homepage_url": "https://github.com/RedThoroughbred/TabVault",
+  "description": "Tab Vault by Seth Egger: save, search and restore tab groups and multi-window workspaces locally.",
+  "permissions": [
+    "tabs",
+    "tabGroups",
+    "storage",
+    "alarms"
+  ],
+  "action": {
+    "default_title": "Tab Vault",
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "32": "icons/icon32.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    }
+  },
+  "icons": {
+    "16": "icons/icon16.png",
+    "32": "icons/icon32.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "tabvault@sethegger.local",
+      "strict_min_version": "139.0"
+    }
+  },
+  "background": {
+    "scripts": [
+      "core.js",
+      "background-firefox.js"
+    ]
+  }
+}
