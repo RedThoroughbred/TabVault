@@ -2,7 +2,8 @@
 
 ## 1.0.0 — November 10, 2026
 - Official v1.0.0 open-source release under the MIT License by Seth Egger.
-- Verified builds and functionality in both Google Chrome and Mozilla Firefox (139+).
+- Verified builds and functionality in both Google Chrome and Mozilla Firefox (140+).
+- Firefox: the manifest declares that Tab Vault collects no data (`data_collection_permissions`), which addons.mozilla.org requires for new add-ons; Firefox 140 or later is now required.
 - Streamlined browser-specific `dist/chrome` and `dist/firefox` build outputs and added `npm run package` to produce ready-to-upload `.zip` archives in `releases/`.
 - Added Chrome Web Store submission guide (`docs/CHROME-WEB-STORE.md`) with permission justifications and store listing metadata.
 

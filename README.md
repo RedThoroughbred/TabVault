@@ -2,7 +2,7 @@
 
 **Created by Seth Egger · v1.0.0 · [MIT License](LICENSE)**
 
-Local-first tab-group and multi-window workspace manager for **Google Chrome** and **Mozilla Firefox (139+)**. No accounts, analytics, third-party scripts, or extension-controlled network connections.
+Local-first tab-group and multi-window workspace manager for **Google Chrome** and **Mozilla Firefox (140+)**. No accounts, analytics, third-party scripts, or extension-controlled network connections.
 
 ## Features
 
@@ -19,7 +19,7 @@ Local-first tab-group and multi-window workspace manager for **Google Chrome** a
 ```text
 src/                       Shared browser extension code + icons
 manifests/chrome.json      Chrome Manifest V3
-manifests/firefox.json     Firefox Manifest V3 (Firefox 139+)
+manifests/firefox.json     Firefox Manifest V3 (Firefox 140+)
 scripts/build.mjs          Dependency-free build script
 scripts/package.mjs        Packages dist/chrome and dist/firefox into .zip archives
 dist/chrome/               Unpacked Chrome extension (generated)
@@ -48,7 +48,7 @@ npm run package  # Generates releases/tab-vault-chrome-v1.0.0.zip and firefox .z
 > **Updating an existing unpacked Chrome installation without losing data:**
 > First export a JSON backup from Tab Vault. Then copy the updated contents of `dist/chrome/` into the **same folder** Chrome already has loaded and click **Reload** on `chrome://extensions`. Do not uninstall the extension if you want to keep existing local storage in place.
 
-### Mozilla Firefox (139+)
+### Mozilla Firefox (140+)
 
 1. Run `npm run build`.
 2. Open `about:debugging` → **This Firefox** → **Load Temporary Add-on…** and select `dist/firefox/manifest.json`.

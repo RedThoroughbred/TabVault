@@ -1,6 +1,6 @@
 # Firefox port notes
 
-Firefox 139+ supports tabs.group and tabGroups query/update, enabling the same group management UX as Chrome. The Firefox Manifest V3 build uses `background.scripts` (the browser does not run Chrome-style background service workers). It loads `core.js` before `background-firefox.js` so TV is already defined.
+Firefox 139+ supports tabs.group and tabGroups query/update, enabling the same group management UX as Chrome. The manifest requires Firefox 140 or later and declares `data_collection_permissions` as `none`: addons.mozilla.org requires that declaration for new add-ons, and Firefox 140 is the first version that shows it in the install prompt. The Firefox Manifest V3 build uses `background.scripts` (the browser does not run Chrome-style background service workers). It loads `core.js` before `background-firefox.js` so TV is already defined.
 
 The shared source currently uses the `chrome.*` namespace with Promise-returning calls, which Firefox generally provides as a compatibility alias; confirm this on your target Firefox build. Some features such as tab selection, collapsed-group focus, window geometry, and alarm scheduling can differ across browsers. These are part of the Firefox manual test plan.
 
