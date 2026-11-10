@@ -58,10 +58,10 @@ async function render(){const [open,saved,s,allLive]=await Promise.all([windowGr
   const c=card(g,`${g.tabs.length} tabs · ${n} supported · ${g.tabs.length-n} skipped`,[
     {label:'Save copy',fn:()=>saveSelected([g],false)},
     {label:'Stash & close',cls:'primary',fn:()=>saveSelected([g],true)},
-    {label:g.collapsed?'Expand in Chrome':'Show in Chrome',fn:async()=>{
+    {label:g.collapsed?'Expand group':'Show group',fn:async()=>{
       await chrome.tabGroups.update(g.id,{collapsed:false});
       const first=g.tabs[0];if(first){await chrome.windows.update(first.windowId,{focused:true});await chrome.tabs.update(first.id,{active:true});}
-      notice('Opened group in Chrome.');await render();
+      notice('Opened the group.');await render();
     }}
   ]);
   const details=el('details');details.open=expandedOpenGroups.has(g.id);
@@ -76,7 +76,7 @@ async function render(){const [open,saved,s,allLive]=await Promise.all([windowGr
       await chrome.tabs.update(t.id,{active:true});
       notice('Switched to the original tab.');
     }));
-    row.append(document.createTextNode(`${tab.title||tab.url||'(no URL)'} — ${tab.url||'Chrome internal page'}`));
+    row.append(document.createTextNode(`${tab.title||tab.url||'(no URL)'} — ${tab.url||'browser internal page'}`));
     if(!TV.allowed(tab.url))row.append(el('span','badge','not saved'));
     details.append(row);
   }
@@ -140,7 +140,7 @@ async function exportJson(){const [groups,workspaces]=await Promise.all([TV.read
 const mdEscape=s=>String(s).replace(/[\\[\]]/g,'\\$&').replace(/[\r\n]/g,' ').replace(/\|/g,'\\|');
 async function exportMarkdown(){
  const [groups,workspaces]=await Promise.all([TV.read(),WS.read()]);
- const lines=['---','tags: [tab-vault, browser-sessions]','---','# Tab Vault — Saved Chrome Sessions','',`Exported: ${new Date().toISOString()}`,''];
+ const lines=['---','tags: [tab-vault, browser-sessions]','---','# Tab Vault — Saved Sessions','',`Exported: ${new Date().toISOString()}`,''];
  function appendGroup(g){
   lines.push(`#### ${String(g.title||'Untitled group').replace(/[\r\n#]/g,' ')} (${g.tabs.length} tabs)`,'',`Saved color: ${g.color} · Saved: ${g.savedAt||'unknown'}`,'');
   for(const t of g.tabs||[])if(TV.allowed(t.url)) lines.push(`- [${mdEscape(t.title||t.url)}](<${t.url.replace(/>/g,'%3E')}>)`);
