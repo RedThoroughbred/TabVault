@@ -1,6 +1,6 @@
 # Chrome Web Store Submission Guide for Tab Vault
 
-This guide contains everything needed to publish **Tab Vault - Group Stash** (`v1.0.0`) by **Seth Egger** to the Chrome Web Store, including ready-to-paste permission justifications and privacy disclosures.
+This guide contains everything needed to publish **Tab Vault - Group Stash** (`v1.0.1`) by **Seth Egger** to the Chrome Web Store, including ready-to-paste permission justifications and privacy disclosures.
 
 ---
 
@@ -8,9 +8,9 @@ This guide contains everything needed to publish **Tab Vault - Group Stash** (`v
 
 Run `npm run package` to generate the uploadable archive:
 
-- **Upload file:** `releases/tab-vault-chrome-v1.0.0.zip`
+- **Upload file:** `releases/tab-vault-chrome-v1.0.1.zip`
 
-> **Important:** Upload `releases/tab-vault-chrome-v1.0.0.zip` (which zips the contents of `dist/chrome/` with `manifest.json` at the root of the archive), **not** the entire repository folder.
+> **Important:** Upload `releases/tab-vault-chrome-v1.0.1.zip` (which zips the contents of `dist/chrome/` with `manifest.json` at the root of the archive), **not** the entire repository folder.
 
 ---
 
@@ -59,7 +59,7 @@ KEY FEATURES
 
 Chrome Web Store requires the following graphic assets in the **Store Listing** tab:
 
-1. **Store Icon:** `128x128` PNG (you can upload `src/icons/icon128.png`).
+1. **Store Icon:** `128x128` PNG. Upload `src/icons/icon128.png` to the Chrome Web Store and `src/icons-firefox/icon128.png` to Firefox Add-ons. Neither may contain a browser's logo: Google and Mozilla both forbid their trademarks in an extension's own logo.
 2. **Screenshots (at least 1 required, up to 5):**
    - Dimensions must be **`1280x800`** or **`640x400`** PNG/JPEG (no alpha transparency).
    - Ready to upload: `docs/store/chrome-1-groups.png` and `docs/store/chrome-2-workspaces.png` (1280x800, the real popup with made-up sample tabs). They also fit the Firefox and Edge listings.

@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "Tab Vault - Group Stash",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "author": "Seth Egger",
   "homepage_url": "https://github.com/RedThoroughbred/TabVault",
   "description": "Tab Vault by Seth Egger: save, search and restore tab groups and multi-window workspaces locally.",

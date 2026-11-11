@@ -4,7 +4,7 @@
 
 # Tab Vault 🔐 — Chrome & Firefox
 
-**Created by Seth Egger · v1.0.0 · [MIT License](LICENSE)**
+**Created by Seth Egger · v1.0.1 · [MIT License](LICENSE)**
 
 Local-first tab-group and multi-window workspace manager for **Google Chrome** and **Mozilla Firefox (140+)**. No accounts, analytics, third-party scripts, or extension-controlled network connections.
 
@@ -25,7 +25,9 @@ Local-first tab-group and multi-window workspace manager for **Google Chrome** a
 ## Repository Layout
 
 ```text
-src/                       Shared browser extension code + icons
+src/                       Shared browser extension code
+src/icons/                 Icons for the Chrome build (blue dial hub)
+src/icons-firefox/         Icons for the Firefox build (orange dial hub)
 manifests/chrome.json      Chrome Manifest V3
 manifests/firefox.json     Firefox Manifest V3 (Firefox 140+)
 scripts/build.mjs          Dependency-free build script
@@ -42,7 +44,7 @@ docs/                      Testing, Firefox notes, and Chrome Web Store submissi
 node --version   # Node 18+ required
 npm run build    # Builds dist/chrome and dist/firefox (zero external dependencies)
 npm test         # Runs unit test suite
-npm run package  # Generates releases/tab-vault-chrome-v1.0.0.zip and firefox .zip
+npm run package  # Generates releases/tab-vault-chrome-v1.0.1.zip and firefox .zip
 ```
 
 ## Browser Installation

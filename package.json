@@ -1,6 +1,6 @@
 {
   "name": "tab-vault",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Local-first Chrome and Firefox tab group & multi-window workspace manager",
   "author": "Seth Egger",
   "license": "MIT",

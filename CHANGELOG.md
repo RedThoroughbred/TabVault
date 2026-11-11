@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.0.1 — November 11, 2026
+- New icon artwork with no third-party logos: the centre of the vault dial is now a plain hub (it used to show a browser logo).
+- Each build has its own icon set: a blue hub for Chrome (`src/icons/`) and an orange hub for Firefox (`src/icons-firefox/`).
+- No changes to features, permissions or stored data.
+
 ## 1.0.0 — November 10, 2026
 - Official v1.0.0 open-source release under the MIT License by Seth Egger.
 - Verified builds and functionality in both Google Chrome and Mozilla Firefox (140+).
