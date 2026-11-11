@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="src/icons/icon128.png" width="128" alt="Tab Vault logo: a vault holding browser tabs, with the words Save, Stash, Search, Restore">
+</p>
+
 # Tab Vault 🔐 — Chrome & Firefox
 
 **Created by Seth Egger · v1.0.0 · [MIT License](LICENSE)**
