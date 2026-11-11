@@ -8,6 +8,8 @@
 
 Local-first tab-group and multi-window workspace manager for **Google Chrome** and **Mozilla Firefox (140+)**. No accounts, analytics, third-party scripts, or extension-controlled network connections.
 
+![The Tab Vault popup listing three open tab groups (Kyoto trip, Synth patches, Weeknight recipes), each with Save copy and Stash & close buttons](docs/store/chrome-1-groups.png)
+
 ## Features
 
 - **Save, stash, search, and restore** tab groups and entire multi-window workspaces.
@@ -17,6 +19,8 @@ Local-first tab-group and multi-window workspace manager for **Google Chrome** a
 - **Deduplicated saves & imports:** prevent identical workspace saves and duplicate imports automatically.
 - **Portable backups:** export/import `tab-vault-v3` JSON; export Markdown with standalone and workspace groups for Obsidian.
 - **Automatic snapshots:** optional 30-minute background snapshots (retaining up to 3 automatic versions per group title/color).
+
+![Whole workspaces: a saved two-monitor workspace with 19 tabs, and a closed saved group that can be restored here or in a new window](docs/store/chrome-2-workspaces.png)
 
 ## Repository Layout
 
