@@ -19,15 +19,15 @@ The earlier live tests predate the Firefox manifest, checkbox and wording change
 
 ## 2. Before submitting
 
-- [ ] Decide the Firefox add-on ID (now `tabvault@sethegger.local` in `manifests/firefox.json`). It can't change after the first upload.
-- [ ] Publish the GitHub repository: push it private, review it, then make it public. The manifests' `homepage_url`, both store listings and the privacy policy link point to `https://github.com/RedThoroughbred/TabVault`.
+- [x] Decide the Firefox add-on ID: `tabvault@sethegger.local` in `manifests/firefox.json` stays (decided 2026-11-11). It can't change after the first upload.
+- [x] Publish the GitHub repository: pushed private, reviewed, made public on 2026-11-11. The manifests' `homepage_url`, both store listings and the privacy policy link point to `https://github.com/RedThoroughbred/TabVault`.
 
 ## 3. Chrome Web Store ($5 one-time)
 
 - [ ] Open the [Developer Dashboard](https://chrome.google.com/webstore/devconsole), sign in (the Google account needs 2-Step Verification), pay the fee and set the publisher name to `Seth Egger`.
 - [ ] **New item** → upload `releases/tab-vault-chrome-v1.0.0.zip`.
 - [ ] **Store listing:** description from [`docs/CHROME-WEB-STORE.md`](docs/CHROME-WEB-STORE.md), category Productivity, icon `src/icons/icon128.png`, screenshots from `docs/store/`.
-- [ ] **Privacy practices:** the single-purpose text and the four permission justifications from the guide; remote code "No"; no data types ticked; privacy policy = `PRIVACY.md` on GitHub.
+- [ ] **Privacy practices:** the single-purpose text and the four permission justifications from the guide; data type **Web history** only (saved tab titles and URLs stay on the device, and Google requires the disclosure even for local storage); the three certifications; privacy policy = `PRIVACY.md` on GitHub. If the form asks about remote code, answer "No".
 - [ ] **Submit for review** (usually a few days).
 
 ## 4. Firefox Add-ons (free)

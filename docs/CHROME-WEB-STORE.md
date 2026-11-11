@@ -98,11 +98,11 @@ Tab Vault saves, searches, exports, and restores browser tab groups and multi-wi
   Required to schedule the optional user-enabled 30-minute periodic background snapshot of currently open tab groups.
   ```
 
-- **Remote Code:**
+- **Remote Code (only if the form asks; it did not for this Manifest V3 package in November 2026):**
   Select **"No, I am not using Remote code."** (All JavaScript is bundled directly inside the extension package with no external scripts or dependencies.)
 
 ### Data Usage Disclosures
-- **Do you collect or transmit any user data?**
-  Uncheck all data collection boxes. Tab Vault stores data exclusively on the user's local device (`chrome.storage.local`) and never transmits any data off the device.
-- **Certify compliance checkboxes:** Check all three Developer Program Policy certifications.
-- **Privacy Policy URL (if prompted):** `https://github.com/RedThoroughbred/TabVault/blob/main/PRIVACY.md`
+- **What user data do you plan to collect from users now or in the future?**
+  Tick **Web history** and nothing else. Tab Vault saves the titles and URLs of the tabs a user chooses to save, with the time they were saved, in `chrome.storage.local` on the user's own device. It never transmits any of it. Google's [User Data FAQ](https://developer.chrome.com/docs/webstore/user_data/) (question 3) requires the disclosure even when data is only processed or stored locally, and "Web history" is the box that describes page URLs, titles and times.
+- **Certify compliance checkboxes:** Check all three Developer Program Policy certifications. All three hold: the extension makes no network requests, so no user data is sold, transferred or used for anything else.
+- **Privacy Policy URL (required):** `https://github.com/RedThoroughbred/TabVault/blob/main/PRIVACY.md`
